@@ -1,0 +1,23 @@
+{
+  "name": "stroke_predict",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^3.9.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-flatten": "^0.4.0",
+    "gulp-htmlmin": "^5.0.1"
+  },
+  "dependencies": {
+    "fetch": "^1.1.0"
+  }
+}
