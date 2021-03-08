@@ -32,11 +32,12 @@
               <li>Age</li>
               <li>Hypertension diagnosis</li>
               <li>Heart disease diagnosis</li>
-              <li>Ever married</li>
-              <li>Residence type</li>
               <li>Glucose level</li>
               <li>Body mass index (BMI)</li>
               <li>Smoking habits</li>
+              <li>Ever married</li>
+              <li>Work type</li>
+              <li>Residence type</li>
             </ol>
         </ul>
     </li>
@@ -49,6 +50,7 @@
   </ul>
   <div class="demo" id="demo">
     <h4>Try it out here</h4>
+    <div id="missing-value">Missing values!</div>
     <div class="demo-input">
       <div class="demo-input-left">
         <div class="input-container">
@@ -64,10 +66,17 @@
           <input type="age" id="age" name="age">
         </div>
         <div class="input-container">
-          <label for="hypertension">Hypertension</label>
+          <label for="hypertension">Hypertension:</label>
           <select name="hypertension" id="hypertension">
             <option value="0">Negative Hypertension diagnosis</option>
             <option value="1">Positive hypertension diagnosis</option>
+          </select>
+        </div>
+        <div class="input-container">
+          <label for="heart-disease">Heart disease:</label>
+          <select name="heart-disease" id="heart-disease">
+            <option value="0">Negative heart disease diagnosis</option>
+            <option value="1">Positive heart disease diagnosis</option>
           </select>
         </div>
         <div class="input-container">
@@ -76,30 +85,44 @@
         </div>
       </div>
       <div class="demo-input-right">
+
         <div class="input-container">
-          <label for="married">Ever Married</label>
-          <select name="married" id="married">
-            <option value="no">No</option>
-            <option value="yes">Yes</option>
-          </select>
+          <label for="bmi">Body mass index:</label>
+          <input type="bmi" id="bmi" name="bmi">
         </div>
+
         <div class="input-container">
-          <label for="work-type">Work Type</label>
-          <select name="work-type" id="work-type">
-            <option value="children">Children</option>
-            <option value="govt">Government Job</option>
-            <option value="never">Never worked</option>
-            <option value="private">Private</option>
-            <option value="self">Self Employed</option>
+          <label for="smoking">Smoking status:</label>
+          <select name="smoking" id="smoking">
+            <option value="formerly smoked">Formerly smoked</option>
+            <option value="never smoked">Never smoked</option>
+            <option value="smokes">Smokes</option>
           </select>
         </div>
 
         <div class="input-container">
-          <label for="smoking">Smoking status</label>
-          <select name="smoking" id="smoking">
-            <option value="former">Formerly smoked</option>
-            <option value="never">Government Job</option>
-            <option value="smokes">Never worked</option>
+          <label for="married">Ever Married:</label>
+          <select name="married" id="married">
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+          </select>
+        </div>
+        <div class="input-container">
+          <label for="work-type">Work Type:</label>
+          <select name="work-type" id="work-type">
+            <option value="children">Children</option>
+            <option value="Govt_job">Government Job</option>
+            <option value="Never_worked">Never worked</option>
+            <option value="Private">Private</option>
+            <option value="Self-employed">Self Employed</option>
+          </select>
+        </div>
+
+        <div class="input-container">
+          <label for="residence-type">Residence type:</label>
+          <select name="residence-type" id="residence-type">
+            <option value="Rural">Rural</option>
+            <option value="Urban">Urban</option>
           </select>
         </div>
       </div>
@@ -116,15 +139,17 @@
       </div>
       <div class="result">
         <h4>Result:</h4>
-        <p>Probability that your statement is <strong>positive</strong>: <span class="result-positive"></span></p>
-        <p>Probability that your statement is <strong>negative</strong>: <span class="result-negative"></span></p>
+        <p>Probability of this record being associated with <strong>having a stroke</strong>: <span class="result-positive"></span></p>
+        <p>Probability of this record being associated with <strong>not having a stroke</strong>: <span class="result-negative"></span></p>
       </div>
     </div>
   </div>
 </body>
 <footer>
-  <p>Disclaimer: I am not a medical professional, this is a demo for a KNN model</p>
-  <p>Data was taken from here https://www.kaggle.com/fedesoriano/stroke-prediction-dataset</p>
+  <h5>Acknowledgements</h5>
+  <p>Disclaimer: This is not from a medical professional, this is just a demo for an ML model.</p>
+  <p>Credit: Data was taken from here <a href="https://www.kaggle.com/fedesoriano/stroke-prediction-dataset">https://www.kaggle.com/fedesoriano/stroke-prediction-dataset</a></p>
+  <p>Author of the dataset: <a href="https://www.kaggle.com/fedesoriano">https://www.kaggle.com/fedesoriano</a></p>
 </footer>
 <script src="app.js"></script>
 </html>

@@ -13,6 +13,7 @@ def initModel():
 
   print("Number of records", data.shape)
   test_data = data.copy(deep=True)
+  test_data = test_data.rename(columns={"Residence_type": "residence_type"})
 
 
   # set up label encoders
@@ -20,12 +21,12 @@ def initModel():
     "gender": LabelEncoder().fit(test_data["gender"].values),
     "ever_married": LabelEncoder().fit(test_data["ever_married"].values),
     "work_type": LabelEncoder().fit(test_data["work_type"].values),
-    "Residence_type": LabelEncoder().fit(test_data["Residence_type"].values),
+    "residence_type": LabelEncoder().fit(test_data["residence_type"].values),
     "smoking_status": LabelEncoder().fit(test_data["smoking_status"].values)
   };
 
   for label in ["gender", "ever_married", "work_type",
-    "Residence_type", "smoking_status"]:
+    "residence_type", "smoking_status"]:
     test_data[label] = encoders[label].transform(test_data[label])
 
   # account for nan in BMI column

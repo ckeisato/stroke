@@ -39,7 +39,7 @@ def main():
       heart_disease,
       encoder["ever_married"].transform([ever_married]),
       encoder["work_type"].transform([work_type]),
-      encoder["Residence_type"].transform([residence_type]),
+      encoder["residence_type"].transform([residence_type]),
       glucose,
       bmi,
       encoder["smoking_status"].transform([smoking])

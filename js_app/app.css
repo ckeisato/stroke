@@ -1,8 +1,9 @@
 body {
   font-family: 'Roboto', sans-serif;
-  color: #2b2d42;
+  color: #FFFFFF;
   padding: 40px 60px;
   font-size: 16px;
+  background: #718F94;
 }
 
 h1 {
@@ -11,8 +12,16 @@ h1 {
 
 
 .demo {
-  /*text-align: center;*/
   margin-bottom: 40px;
+}
+
+#missing-value {
+  display: none;
+  color: red;
+}
+
+#missing-value.display {
+  display: block;
 }
 
 .demo .loading-indicator {
@@ -43,14 +52,39 @@ label {
   display: inline-block;
 }
 
+input, select, button {
+  border-radius: 5px;
+  border: 2px solid #FFFFFF;
+  font-size: 15px;
+  color: #FFFFFF;
+  background: #718F94;
+}
+
 input, select {
   padding: 3px;
-  border-radius: 5px;
-  border-width: 2px;
-  font-size: 15px;
-  width: 49%;
   box-sizing: border-box;
   display: inline-block;
+  width: 49%;
+}
+
+input::placeholder {
+  color: #FFFFFF;
+}
+
+button {
+  padding: 10px;
+  margin-right: 10px;
+}
+
+button:hover {
+  background: #FFFFFF;
+  color: #718F94;
+  transition: all 0.2s;
+}
+
+button:disabled {
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 .input-container {
@@ -65,32 +99,17 @@ input, select {
   margin-bottom: 20px;
 }
 
-.cta {
-  padding: 30px;
+.demo .loading-indicator {
+  display: none;
 }
 
-.button {
-  font-family:'Roboto',sans-serif;
-  text-align: center;
-  font-weight: bold;
-  text-decoration: none;
-  background-color: #FFFFFF;
-  padding: 10px;
-  margin: 0 10px 2px 0;
-  border-radius: 5px;
-  box-sizing: border-box;
-  transition: all 0.2s;
-  min-width: 100px;
+.demo .result {
+  display: none;
 }
 
-.button:hover {
-  color: #FFFFFF;
-  background-color: #34495e;
+.demo.loading .loading-indicator {
+  display: block;
 }
 
-.button:disabled {
-  pointer-events: none;
-  opacity: 0.5;
-}
 
 
