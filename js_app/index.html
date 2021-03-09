@@ -14,7 +14,7 @@
   <h4>Information about the model and application</h4>
   <ul>
     <li>
-      The model built using sklearn's KNN module and uses the default settings.  The source code for how the model was trained and constructed can be found XXX
+      The model built using sklearn's KNN module and uses the default settings.  The source code for how the model was trained and constructed can be found <a href="https://github.com/ckeisato/stroke">here</a>.
     </li>
     <li>
       The model is trained on dataset of 5,110 records, of those 4,861 were from patients who never had a stroke and 249 were from those who experienced a stroke.
@@ -22,6 +22,7 @@
           <li>
             The module was trained with 10/90 test train split.
           </li>
+          <li>n = 5, model was initialized with weights=distance</li>
           <li>
             The model had an accuracy of ~93% with the test data.
           </li>
@@ -126,7 +127,7 @@
           </select>
         </div>
       </div>
-      <p>For a person without diabetes, a normal glucose level is 70-130 mg/dL.  In this dataset, the average glucose value was 106.</p>
+      <p class="note">* For a person without diabetes, a normal glucose level is 70-130 mg/dL.  In this dataset, the average glucose value was 106.</p>
     </div>
     <div class="cta">
       <button type="button" id="analyze-cta" class="button">Evaluate Data</button>

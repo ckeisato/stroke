@@ -23,7 +23,7 @@ def initModel():
     "work_type": LabelEncoder().fit(test_data["work_type"].values),
     "residence_type": LabelEncoder().fit(test_data["residence_type"].values),
     "smoking_status": LabelEncoder().fit(test_data["smoking_status"].values)
-  };
+  }
 
   for label in ["gender", "ever_married", "work_type",
     "residence_type", "smoking_status"]:
@@ -42,7 +42,7 @@ def initModel():
 
 
   # train model
-  neigh = KNeighborsClassifier(n_neighbors=20)
+  neigh = KNeighborsClassifier(n_neighbors=5, weights="distance")
   neigh.fit(x_train, y_train)
   print('done fitting model, will start scoring')
 

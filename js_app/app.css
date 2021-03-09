@@ -10,8 +10,15 @@ h1 {
   text-align: center;
 }
 
+.note {
+  font-size: 12px;
+}
 
 .demo {
+  margin-bottom: 100px;
+}
+
+.demo-input {
   margin-bottom: 40px;
 }
 
@@ -24,21 +31,6 @@ h1 {
   display: block;
 }
 
-.demo .loading-indicator {
-  display: none;
-}
-
-.demo .result {
-  display: none;
-}
-
-.demo.loading .loading-indicator {
-  display: block;
-}
-
-.demo.done .result {
-  display: block;
-}
 .demo-input-left,
 .demo-input-right {
   width: 50%;
@@ -99,17 +91,18 @@ button:disabled {
   margin-bottom: 20px;
 }
 
-.demo .loading-indicator {
-  display: none;
-}
-
+.demo .loading-indicator,
 .demo .result {
   display: none;
+  width: 50%;
+  vertical-align: top;
 }
 
 .demo.loading .loading-indicator {
-  display: block;
+  display: inline-block;
 }
 
-
+.demo.done .result {
+  display: inline-block;
+}
 

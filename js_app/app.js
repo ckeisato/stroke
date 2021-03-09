@@ -69,7 +69,7 @@ function init() {
       response.text().then(function(text) {
         if (text) {
           demo.classList.add("done");
-          demo.classList.remove("loading");
+          // demo.classList.remove("loading");
           
           cta.disabled = false;
           reset.disabled = false;
@@ -77,8 +77,8 @@ function init() {
 
           var results = JSON.parse(text);
 
-          var positive = Math.round(parseFloat(results.stroke) * 10000)/100;
-          var negative = Math.round(parseFloat(results.noStroke) * 10000)/100;
+          var positive = Math.round(parseFloat(results.stroke) * 100);
+          var negative = Math.round(parseFloat(results.noStroke) * 100);
 
           for (var i = 0; i < 1; i++) {
             resultsPositive[i].innerText = positive + '%';
