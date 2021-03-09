@@ -36,14 +36,13 @@ def initModel():
   x_train, x_test, y_train, y_test = train_test_split(
       test_data.drop(["id", "stroke"], axis=1),
       test_data["stroke"],
-      test_size=0.1,
-      random_state=42
+      test_size=0.2
   )
   print('done splitting data')
 
 
   # train model
-  neigh = KNeighborsClassifier(n_neighbors=3)
+  neigh = KNeighborsClassifier(n_neighbors=20)
   neigh.fit(x_train, y_train)
   print('done fitting model, will start scoring')
 
